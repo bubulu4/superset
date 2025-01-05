@@ -17,7 +17,7 @@
  * under the License.
  */
 import { styled } from '@superset-ui/core';
-import { Collapse as AntdCollapse } from 'antd';
+import { Collapse as AntdCollapse } from 'antd-v5';
 import { CollapseProps as AntdCollapseProps } from 'antd/lib/collapse';
 
 export interface CollapseProps extends AntdCollapseProps {
@@ -53,22 +53,6 @@ const Collapse = Object.assign(
             .anticon.anticon-right.ant-collapse-arrow > svg {
               transform: rotate(90deg) !important;
             }
-          `}
-
-        ${({ light, theme }) =>
-          light &&
-          `
-            color: ${theme.colors.grayscale.light4};
-            .ant-collapse-arrow svg {
-              color: ${theme.colors.grayscale.light4};
-            }
-          `}
-
-        ${({ ghost, bordered, theme }) =>
-          ghost &&
-          bordered &&
-          `
-            border-bottom: 1px solid ${theme.colors.grayscale.light3};
           `}
       }
       .ant-collapse-content {
