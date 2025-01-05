@@ -141,7 +141,7 @@ const SouthPane = ({
         onChange={switchTab}
         id={nanoid(11)}
         fullWidth={false}
-        animated={true}
+        animated={false}
       >
         <Tabs.TabPane tab={t('Results')} key="Results">
           <Results
