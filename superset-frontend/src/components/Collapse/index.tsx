@@ -40,20 +40,6 @@ const Collapse = Object.assign(
             : theme.typography.weights.normal};
         font-size: ${({ bigger, theme }) =>
           bigger ? `${theme.gridUnit * 4}px` : 'inherit'};
-
-        .ant-collapse-arrow svg {
-          transition: ${({ animateArrows }) =>
-            animateArrows ? 'transform 0.24s' : 'none'};
-        }
-
-        ${({ expandIconPosition }) =>
-          expandIconPosition &&
-          expandIconPosition === 'right' &&
-          `
-            .anticon.anticon-right.ant-collapse-arrow > svg {
-              transform: rotate(90deg) !important;
-            }
-          `}
       }
       .ant-collapse-content {
         .ant-collapse-content-box {
@@ -62,18 +48,6 @@ const Collapse = Object.assign(
             display: block;
           }
         }
-      }
-    }
-    .ant-collapse-item-active {
-      .ant-collapse-header {
-        ${({ expandIconPosition }) =>
-          expandIconPosition &&
-          expandIconPosition === 'right' &&
-          `
-            .anticon.anticon-right.ant-collapse-arrow > svg {
-              transform: rotate(-90deg) !important;
-            }
-          `}
       }
     }
   `,
