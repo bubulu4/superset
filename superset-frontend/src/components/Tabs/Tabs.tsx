@@ -17,7 +17,8 @@
  * under the License.
  */
 import { css, styled } from '@superset-ui/core';
-import AntdTabs, { TabsProps as AntdTabsProps } from 'antd/lib/tabs';
+import { Tabs as AntdTabs } from 'antd-v5';
+import type { TabsProps } from 'antd-v5';
 import Icons from 'src/components/Icons';
 
 export interface TabsProps extends AntdTabsProps {
